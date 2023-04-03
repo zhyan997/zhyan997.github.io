@@ -1,0 +1,112 @@
+<!-- Week 2 Digital Chalkboard -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Digital Chalkboard</title>
+    <link rel="stylesheet" href="week2_style.css">
+</head>
+<body>
+    <h1> Week 2 Digital Chalkboard </h1>
+    <hr id="hr-1">
+    <h3 class="subtitle"> How do you add comments to HTML? </h3>
+    <p id="p1"> This is done by typing "< !-- replace this with your comment -->", or simply using the shortcut <b>command + /</b> in macOS system (<b>windows + /</b> in Windows system). </p>
+
+    <h3 class="subtitle"> VS Code has a nifty trick for using multiple cursors </h3>
+    <p id="p2"> This can be done with <b>Alt+Click (Option+Click on macOS). </b> </p>
+
+    <h3 class="subtitle">Inheritance and cascading in CSS</h3>
+    <h4> Cascade </h4>
+    <p id="p3-casc">Cascade — at a very simple level, this means that the origin, the cascade layer, and the order of CSS rules matter. When two rules from the same cascade layer apply and both have equal specificity, the one that is defined last in the stylesheet is the one that will be used.</p>
+    <p id="p3-try1"> In this example we are changing the color of this paragraph two times, first blue then red, we can see that it ends up in red. </p>
+
+    <h4>Inheritance</h4>
+    <p id="p3-inhr">Inheritance — some CSS property values set on parent elements are inherited by their child elements, and some aren't.
+    <br><br>
+    For example, if you set a color and font-family on an element, every element inside it will also be styled with that color and font, unless you've applied different color and font values directly to them.</p>
+    <p id="p3-try2">
+        In this example we are having a list:
+        <ul class="p3-ul">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+            <li class="None">item 5</li>
+        </ul>
+        We can see that the color applied to all items in the list, unless we give an item a specific class and specify the item color.
+    </p>
+
+    <h3 class="subtitle">Use MDNLinks to an external site. to find out how to create an HTML table</h3>
+    <table class="table" id="tab-1" border="1" width = 500>
+        <caption id="tab-1-cap">This is an example of how to create Table</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Student Name</th>
+                <th>Group</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>000000</th>
+                <th>Someone</th>
+                <th>1</th>
+            </tr>
+            <tr>
+                <th>000001</th>
+                <th>Nobody</th>
+                <th rowspan="2">2</th>
+            </tr>
+            <tr>
+                <th>000002</th>
+                <th>Somebody</th>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Count</th>
+                <th colspan="2">3</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h3 class="subtitle">Be prepared to style fonts with CSS</h3>
+    <p id="p4-1">This shows how to control font weight: weight = 100 </p>
+    <p id="p4-2">This shows how to control font weight: weight = 900</p>
+    <p id="p4-3">This shows how to control font family: 'Courier New', Courier, monospace; </p>
+    <p id="p4-4">This shows how to control font family: 
+        <br>
+        font-family: 'Times New Roman', Times, serif; 
+        &emsp;+&emsp; font-style: Italic 
+        &emsp;+&emsp; font-size: medium;
+    </p>
+
+    <h3 class="subtitle">Be ready to create lists with < ol> and < ul></h3>
+    <ol id="ol-1">
+        <caption>This is an example of ordered list</caption>
+        <li>first place</li>
+        <li>second place</li>
+        <li>third place</li>
+    </ol>
+    <ul id="ul-1">
+        <caption>This is an example of unordered list</caption>
+        <li>some item</li>
+        <li>other item</li>
+        <li>no item</li>
+    </ul>
+
+    <h3 class="subtitle">Use MDN to understand anchor links</h3>
+    <p>Basic use of anchor links: </p>
+    <a href="https://www.google.com/" id="google">Press here to be redirected to Google</a>
+    <br><br>
+    <a href="https://www.google.com/" id="google">
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Link to Google" width="300" >
+    </a>
+    
+    <h3 class="subtitle">Pseudo-elements</h3>
+    <p id="pseudo-elem">This is an example of pseudo element</p>
+</body>
+</html>
