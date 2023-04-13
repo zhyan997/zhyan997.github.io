@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Presentation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+</head>
+<body>
+    <!-- nav -->
+    <div class="container-fluid" style="background-color: maroon;">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html">DIGS 30005</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                      Digital Chalkboard
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="digital_chalkboard/week2.html">Week 02</a></li>
+                      <li><a class="dropdown-item" href="sandbox.html">Week 03</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sandbox.html">Sandbox</a>
+                  </li>
+                </ul>
+      
+              </div>
+            </div>
+          </nav>
+    </div>
+
+    <!-- Title -->
+    <div class="container mt-3">
+        <h1>Group 3 Technical Presentation</h1>
+    </div>
+
+    <!-- image-basic -->
+    <div class="container mt-4">
+        <h3 class="h3 px-3 mb-4" style="color:grey">- Displaying and handling images with Bootstrap.</h3>
+
+        <div class="container my-4">
+            <a href="https://getbootstrap.com/docs/4.0/content/images/" class="btn btn-primary" role="button" aria-pressed="true">View Bootstrap Image Documentation</a>
+        </div>
+
+        <figure class="figure m-3">
+            <img src="images/Amazon_icon.png" class="figure-img img-fluid rounded" width="300">
+            <figcaption class="figure-caption text-center">This is how you put caption under image</figcaption>
+        </figure>
+        <figure class="figure m-3">
+            <img src="images/Google_icon.png" class="figure-img img-thumbnail rounded" width="300">
+            <figcaption class="figure-caption text-center">img-thumbnail</figcaption>
+        </figure>
+        
+        <div class="container my-3">
+            <img src="https://i.pinimg.com/736x/af/8b/6d/af8b6d7d98e08dd98ec631890ef9bf0b.jpg" class="img-fluid rounded float-start w-25">
+            <img src="https://i.pinimg.com/736x/af/8b/6d/af8b6d7d98e08dd98ec631890ef9bf0b.jpg" class="img-fluid rounded float-end w-25">
+            <p class="text-center h4"> You can put text in the middle</p>
+            <img src="images/Microsoft_icon.png" class="rounded mx-auto d-block w-25">
+            <p class="text-center h5 mt-2">Or Image</p>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </div>
+
+
+    <!-- Grid show -->
+    <div class="container w-75">
+        <h3>You can use grid to show images like this:</h3>
+        <br>
+        <div class="row">
+            <div class="col">
+            <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                class="w-100 shadow-lg rounded mb-4"
+                alt="Boat on Calm Water"
+            />
+        
+            <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain1.webp"
+                class="w-100 shadow-lg rounded mb-4"
+                alt="Wintry Mountain Landscape"
+            />
+            </div>
+        
+            <div class="col">
+            <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain2.webp"
+                class="w-100 shadow-lg rounded mb-4"
+                alt="Mountains in the Clouds"
+            />
+        
+            <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp"
+                class="w-100 shadow-lg rounded mb-4"
+                alt="Boat on Calm Water"
+            />
+            </div>
+        
+            <div class="col">
+            <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(18).webp"
+                class="w-100 shadow-lg rounded mb-4"
+                alt="Waves at Sea"
+            />
+        
+            <img
+                src="https://mdbcdn.b-cdn.net/img/Photos/Vertical/mountain3.webp"
+                class="w-100 shadow-lg rounded mb-4"
+                alt="Yosemite National Park"
+            />
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- slide show -->
+    <div class="container w-75">
+        <h3>Or a slide show: </h3>
+        <br>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/landscape1.jpg" class="d-block img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/landscape2.jpg" class="d-block img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/landscape3.jpg" class="d-block img-fluid" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="container my-4">
+            <a href="https://getbootstrap.com/docs/5.0/components/carousel/" class="btn btn-primary" role="button" aria-pressed="true">Learn more</a>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>
