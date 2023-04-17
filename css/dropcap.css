@@ -1,0 +1,19 @@
+.dropcapUChi::first-letter {
+    float: left;
+    font-size: 3em;
+    line-height: 0.8em;
+    padding-right: 0.15em;
+    padding-top: 0.1em;
+    color: maroon;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.dropcapUCSD::first-letter {
+    float: left;
+    font-size: 3em;
+    line-height: 0.8em;
+    padding-right: 0.15em;
+    padding-top: 0.1em;
+    color: #182B49;
+    font-family:'Times New Roman', Times, serif;
+}

@@ -8,9 +8,14 @@
     <!-- JS -->
     <script src="js/showImg.js"></script>
     <script src="js/sampleJS.js"></script>
+    <script src="js/map.js"></script>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+    <!-- map CSS & JS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
     <title>Sandbox</title>
 </head>
@@ -67,6 +72,7 @@
         <button type="button" class="btn btn-success" onclick="getTime()">Get Time</button>
         <button type="button" class="btn btn-danger" onclick="disappear()">Disappear</button>
         <button type="button" class="btn btn-success" onclick="retrieve()">Retrieve</button>
+        <button type="button" class="btn btn-primary" onclick="coursesAlert()">Courses</button>
     </div>
 
     <div class="card container mt-4">
@@ -78,6 +84,64 @@
     </div>
 
 
+    <body onload="mapLoad()">
+      <nav class="navbar navbar-expand-lg navbar-dark container-fluid">
+        <a class="navbar-brand" href="index.html">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+    
+          <li class="nav-item">
+            <a class="nav-link" href="https://digitalstudies.uchicago.edu/">Digital Studies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="map.html">Map API</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Research
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="http://ochre.lib.uchicago.edu/RSTI/">Ras Shamra</a>
+            <a class="dropdown-item" href="https://voices.uchicago.edu/cedar/">CEDAR</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item"
+            href="https://oi.uchicago.edu/research/projects/persepolis-fortification-archive">Persepolis</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+    </nav>
+    
+    <div class="container mt-3">
+      <h1>Map API Example</h1>
+      <div id="map"></div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <div class="container d-sm-block d-none">
+      <footer class="py-3 mt-5">
+        <ul class="nav justify-content-center border-bottom pb-2 mb-3">
+          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
+          <li class="nav-item"><a href="sandbox.html" class="nav-link px-2 text-muted">Sandbox</a></li>
+        </ul>
+        <p class="text-center text-muted">&copy; 2023 Zhaoyang Yan</p>
+      </footer>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>

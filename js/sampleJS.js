@@ -1,6 +1,8 @@
+// "use strict"
+
 function howdy(firstName){
     alert("Howdy " + firstName);
-}
+};
 
 // 
 function conditional() {
@@ -12,7 +14,7 @@ function conditional() {
     } else {
         alert("Good evening!");
     }
-}
+};
 
 function evalNumber() {
     var userInput = prompt("Please enter a 5-digit number:")
@@ -25,34 +27,53 @@ function evalNumber() {
     } else {
         alert(userInput + " is an odd number.")
     }
-}
+};
 
 function changeTitle() {
     let selectedElement = document.getElementById("programCard");
     console.log(selectedElement);
     selectedElement.innerText = "DIGS";
-}
+};
 
 function getMinute() {
     let selectedElement = document.getElementById("minute");
     let currentMinute = new Date().getMinutes();
     selectedElement.innerText = currentMinute
-}
+};
 
 function getTime() {
     let selectedElement = document.getElementById("time");
     let currentMinute = new Date().toTimeString();
     selectedElement.innerText = "Current Time: " + currentMinute
-}
+};
 
 function disappear() {
     let selectedElement = document.getElementById("time");
     selectedElement.style.display = "none"
-}
+};
 
 function retrieve() {
     let selectedElement = document.getElementById("time");
     selectedElement.style.display = ""
-}
+};
 
+function welcome() {
+    alert("Welcome to my site!")
+};
+
+var mapSetting = {
+    id: "mapID",
+    zoomOffset: -1,
+    center: latLng
+};
+
+// courses.push("new elem")
+// president[45] = "elem" - Add element to specific position
+
+function coursesAlert() {
+    var courses = ['Digital Text', 'Data Publication', "Data Analysis"];
+    for (let i = 0; i < courses.length; i++) {
+        alert(courses[i])
+    };
+};
 
