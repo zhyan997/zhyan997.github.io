@@ -7,7 +7,7 @@
  *
  *  MIT License
  */
-
+ 
 (function() {
 
   'use strict';
