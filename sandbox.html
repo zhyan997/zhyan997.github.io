@@ -22,7 +22,7 @@
 
     <title>Sandbox</title>
 </head>
-<body onload="mapLoad()">
+<body onload="mapLoad(); addElements()">
     <!-- navbar -->
     <div class="container-fluid" style="background-color: maroon;">
       <nav class="navbar navbar-expand-lg navbar-dark">
@@ -56,6 +56,9 @@
                 <li class="nav-item">
                   <a class="nav-link" href="sandbox.html">Sandbox</a>
                 </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="wikiAPI.html">Wiki API</a>
+                </li>
               </ul>
     
             </div>
@@ -66,6 +69,7 @@
     <!-- buttons -->
     <div class="container mt-4">
         <div class="h2">Sample JS</div>
+        <div id="addElements"></div>
         <div class="h3" id="minute"></div>
         <div class="h4" id="time">Current Time: </div>
         <button type="button" class="btn btn-primary" onclick="howdy('Tommy')">Run Sample JS</button>
@@ -76,8 +80,39 @@
         <button type="button" class="btn btn-success" onclick="getTime()">Get Time</button>
         <button type="button" class="btn btn-danger" onclick="disappear()">Disappear</button>
         <button type="button" class="btn btn-success" onclick="retrieve()">Retrieve</button>
-        <button type="button" class="btn btn-primary" onclick="coursesAlert()">Courses</button>
+        <button type="button" class="btn btn-primary" onclick="coursesAlert(courses)">Courses Array</button>
     </div>
+
+    <div class="container my-5">
+      <h3>Sort Fruit</h3>
+      <form>
+        <div class="mb-2">
+          <label for="fruit1" class="form-label">First Fruit</label>
+          <input type="text" class="form-control" id="fruit1" placeholder="Enter a fruit">
+        </div>
+        <div class="mb-2">
+          <label for="fruit2" class="form-label">Second Fruit</label>
+          <input type="text" class="form-control" id="fruit2" placeholder="Enter a fruit">
+        </div>
+        <div class="mb-2">
+          <label for="fruit3" class="form-label">Third Fruit</label>
+          <input type="text" class="form-control" id="fruit3" placeholder="Enter a fruit">
+        </div>
+        <div class="mb-2">
+          <label for="fruit4" class="form-label">Fourth Fruit</label>
+          <input type="text" class="form-control" id="fruit4" placeholder="Enter a fruit">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="parseArray()">Submit</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
+      </form>
+
+      <div class="container mt-4">
+        <h3>Result</h3>
+        <p id="sortFruit"></p>
+      </div>
+    </div>
+
+
 
     <div class="card container mt-4">
         <img class="card-img-top" src="https://www.capgemini.com/be-en/wp-content/uploads/sites/17/2018/10/Digital-Transformation-14.jpg" alt="">
