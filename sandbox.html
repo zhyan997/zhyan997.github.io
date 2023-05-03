@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/navfooter.js"></script>
 
     <!-- JS -->
     <script src="js/showImg.js"></script>
@@ -13,8 +17,9 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/map.css">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS & JS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
     <!-- map CSS & JS -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
@@ -24,52 +29,9 @@
     <link rel="shortcut icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/9009/9009200.png">
 
 </head>
-<body onload="mapLoad()">
+<body onload="mapLoad()" class="d-flex flex-column h-100">
     <!-- navbar -->
-    <div class="container-fluid" style="background-color: maroon;">
-      <nav class="navbar navbar-expand-lg navbar-dark">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">DIGS 30005</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                    Digital Chalkboard
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="digital_chalkboard/week2.html">Week 02</a></li>
-                    <li><a class="dropdown-item" href="sandbox.html">Week 03</a></li>
-                    <li><a class="dropdown-item" href="tech.html">Technical Presentation</a></li>
-                    <li><a class="dropdown-item" href="howler.html">Howler Example</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sandbox.html">Sandbox</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="wikiAPI.html">Wiki API</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="retiTexts.html">Ochre API</a>
-                </li>
-              </ul>
-    
-            </div>
-          </div>
-        </nav>
-  </div> 
+    <div id="navbar"></div>
 
     <!-- buttons -->
     <div class="container mt-4">
@@ -119,7 +81,7 @@
 
 
 
-    <div class="card container mt-4">
+    <div class="card container mt-1">
         <img class="card-img-top" src="https://www.capgemini.com/be-en/wp-content/uploads/sites/17/2018/10/Digital-Transformation-14.jpg" alt="">
         <div class="card-body">
             <h4 id="programCard" class="card-title">Digital Studies</h4>
@@ -129,7 +91,7 @@
 
     <!-- map -->
     
-    <div class="container mt-3">
+    <div class="container my-3">
       <h1>Map API Example</h1>
       <div id="map"></div>
     </div>
@@ -142,18 +104,8 @@
 
 
     <!-- footer -->
-    <div class="container d-sm-block d-none">
-      <footer class="py-3 mt-5">
-        <ul class="nav justify-content-center border-bottom pb-2 mb-3">
-          <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
-          <li class="nav-item"><a href="sandbox.html" class="nav-link px-2 text-muted">Sandbox</a></li>
-        </ul>
-        <p class="text-center text-muted">&copy; 2023 Zhaoyang Yan</p>
-      </footer>
-    </div>
+    <div id="footer"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    
 </body>
 </html>

@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/navfooter.js"></script>
+
     <!-- JS -->
     <script src="js/ochreAPI.js"></script>
 
@@ -18,51 +22,7 @@
 </head>
 <body onload="loadXML()" class="d-flex flex-column h-100">
     <!-- navbar -->
-    <div class="container-fluid" style="background-color: maroon;">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">DIGS 30005</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
-                        Digital Chalkboard
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="digital_chalkboard/week2.html">Week 02</a></li>
-                        <li><a class="dropdown-item" href="sandbox.html">Week 03</a></li>
-                        <li><a class="dropdown-item" href="tech.html">Technical Presentation</a></li>
-                        <li><a class="dropdown-item" href="howler.html">Howler Example</a></li>
-                    </ul>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="sandbox.html">Sandbox</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="wikiAPI.html">Wiki API</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="retiTexts.html">Ochre API</a>
-                    </li>
-                    
-                </ul>
-        
-                </div>
-            </div>
-            </nav>
-    </div> 
+    <div id="navbar"></div>
 
     <div class="container mt-3">
         <div id="title"></div>
@@ -92,17 +52,7 @@
 
 
 
-    <footer class="footer mt-auto py-3 bg-light d-sm-block d-none">
-        <div class="container">
-          <ul class="nav justify-content-center border-bottom pb-2 mb-3">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-muted">Contact</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
-            <li class="nav-item"><a href="sandbox.html" class="nav-link px-2 text-muted">Sandbox</a></li>
-          </ul>
-          <p class="text-center text-muted">&copy; 2023 Zhaoyang Yan</p>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
 </body>
 </html>
